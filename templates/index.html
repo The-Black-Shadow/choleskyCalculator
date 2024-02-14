@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cholesky Factorization Calculator</title>
+    <title>Factorization</title>
     <style>
         /* Add any custom CSS styles here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
+            margin-top: 150px;
             padding: 0;
+            padding-top: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background: linear-gradient(to bottom, #4CAF50, #d3cfcf)
         }
         .container {
             text-align: center;
+            padding-top: 20px;
         }
         input[type="number"] {
             padding: 8px;
@@ -45,8 +48,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Cholesky Factorization Calculator</h1>
-        <div>
+        <h1>Solving Equation using Factorization</h1>
+        <div style="padding-top: 40px;">
             <h3>Equation 1:</h3>
             <label for="eqn1_x">Coefficient x:</label>
             <input type="number" id="eqn1_x" placeholder="Coefficient x">
@@ -68,7 +71,7 @@
             <label for="eqn2_constant">Constant:</label>
             <input type="number" id="eqn2_constant" placeholder="Constant">
         </div>
-        <div>
+        <div style="padding-bottom: 20px;">
             <h3>Equation 1:</h3>
             <label for="eqn3_x">Coefficient x:</label>
             <input type="number" id="eqn3_x" placeholder="Coefficient x">
@@ -79,7 +82,6 @@
             <label for="eqn3_constant">Constant:</label>
             <input type="number" id="eqn3_constant" placeholder="Constant">
         </div>
-        <!-- Add similar divs for Equation 2 and Equation 3 -->
         <button onclick="calculate()">Calculate</button>
         <div id="result"></div>
         <div id="graph"></div>
