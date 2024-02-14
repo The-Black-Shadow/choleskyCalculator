@@ -38,6 +38,9 @@
         #result {
             margin-top: 20px;
         }
+        #graph {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -55,7 +58,7 @@
             <input type="number" id="eqn1_constant" placeholder="Constant">
         </div>
         <div>
-            <h3>Equation 2:</h3>
+            <h3>Equation 1:</h3>
             <label for="eqn2_x">Coefficient x:</label>
             <input type="number" id="eqn2_x" placeholder="Coefficient x">
             <label for="eqn2_y">Coefficient y:</label>
@@ -66,7 +69,7 @@
             <input type="number" id="eqn2_constant" placeholder="Constant">
         </div>
         <div>
-            <h3>Equation 3:</h3>
+            <h3>Equation 1:</h3>
             <label for="eqn3_x">Coefficient x:</label>
             <input type="number" id="eqn3_x" placeholder="Coefficient x">
             <label for="eqn3_y">Coefficient y:</label>
@@ -76,10 +79,13 @@
             <label for="eqn3_constant">Constant:</label>
             <input type="number" id="eqn3_constant" placeholder="Constant">
         </div>
+        <!-- Add similar divs for Equation 2 and Equation 3 -->
         <button onclick="calculate()">Calculate</button>
         <div id="result"></div>
+        <div id="graph"></div>
     </div>
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="/static/script.js"></script>
 </body>
 </html>

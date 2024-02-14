@@ -33,6 +33,25 @@ function calculate() {
     .then(data => {
         // Update the content of the result div
         document.getElementById('result').innerHTML = `Result: [${data.result.join(', ')}]`;
+        // Plot 3D graph using Plotly
+        const graphDiv = document.getElementById('graph');
+        const traces = [];
+        for (let i = 0; i < data.equations.length; i++) {
+            const equation = data.equations[i];
+            traces.push({
+                type: 'scatter3d',
+                x: equation.surface_x,
+                y: equation.surface_y,
+                z: equation.surface_z,
+                mode: 'markers',
+                marker: {
+                    size: 3,
+                    opacity: 0.8
+                },
+                name: `Equation ${i + 1}`
+            });
+        }
+        Plotly.newPlot(graphDiv, traces, {title: '3D Graph'});
     })
     .catch(error => {
         console.error('Error:', error);
