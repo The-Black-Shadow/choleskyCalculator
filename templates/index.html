@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cholesky Factorization Calculator</title>
+    <style>
+        /* Add any custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cholesky Factorization Calculator</h1>
+        <div>
+            <h3>Equation 1:</h3>
+            <label for="eqn1_x">Coefficient x:</label>
+            <input type="number" id="eqn1_x" placeholder="Coefficient x">
+            <label for="eqn1_y">Coefficient y:</label>
+            <input type="number" id="eqn1_y" placeholder="Coefficient y">
+            <label for="eqn1_z">Coefficient z:</label>
+            <input type="number" id="eqn1_z" placeholder="Coefficient z">
+            <label for="eqn1_constant">Constant:</label>
+            <input type="number" id="eqn1_constant" placeholder="Constant">
+        </div>
+        <div>
+            <h3>Equation 2:</h3>
+            <label for="eqn2_x">Coefficient x:</label>
+            <input type="number" id="eqn2_x" placeholder="Coefficient x">
+            <label for="eqn2_y">Coefficient y:</label>
+            <input type="number" id="eqn2_y" placeholder="Coefficient y">
+            <label for="eqn2_z">Coefficient z:</label>
+            <input type="number" id="eqn2_z" placeholder="Coefficient z">
+            <label for="eqn2_constant">Constant:</label>
+            <input type="number" id="eqn2_constant" placeholder="Constant">
+        </div>
+        <div>
+            <h3>Equation 3:</h3>
+            <label for="eqn3_x">Coefficient x:</label>
+            <input type="number" id="eqn3_x" placeholder="Coefficient x">
+            <label for="eqn3_y">Coefficient y:</label>
+            <input type="number" id="eqn3_y" placeholder="Coefficient y">
+            <label for="eqn3_z">Coefficient z:</label>
+            <input type="number" id="eqn3_z" placeholder="Coefficient z">
+            <label for="eqn3_constant">Constant:</label>
+            <input type="number" id="eqn3_constant" placeholder="Constant">
+        </div>
+        <button onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
